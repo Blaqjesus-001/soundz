@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./PROGET.WEB PY_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Osaze - Home of innovative solutions and web design.">
+    <meta name="keywords" content="Osaze, web design, programming, AI, technology">
+    <meta name="author" content="Osaze David">
+    <title>Osaze</title>
+    <link rel="stylesheet" href="./PROGET.WEB PY_files/styles.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, navy, lightgreen); /* Set background gradient from navy blue to light green */
+            color: green; /* Set font color to green */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: yellow;
+        }
+        main {
+            padding-top: 60px; /* Adjust for fixed header */
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            color: yellow; /* Change heading color */
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: green;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .hero button:hover {
+            background: darkgreen;
+        }
+        section#about {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+        section#about h1 {
+            color: blue; /* Change heading color */
+        }
+        section#contact {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        section#contact h1 {
+            color: red; /* Change heading color */
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero .container {
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4em;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .hero button {
+            font-size: 1.2em;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .social-links a:hover {
+            color: yellow;
+        }
+        .contact-form {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: green;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: darkgreen;
+        }
+        .testimonials {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .testimonials h2 {
+            color: blue;
+        }
+        .testimonial {
+            margin: 20px 0;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .newsletter-signup {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .newsletter-signup input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+        .newsletter-signup button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background: green;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .newsletter-signup button:hover {
+            background: darkgreen;
+        }
+        .projects {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .projects h2 {
+            color: blue;
+        }
+        .project {
+            margin: 20px 0;
+        }
+        .project p {
+            font-style: italic;
+        }
+        .project span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .blog {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .blog h2 {
+            color: blue;
+        }
+        .blog-post {
+            margin: 20px 0;
+        }
+        .blog-post p {
+            font-style: italic;
+        }
+        .blog-post span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .fun-facts {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .fun-facts h2 {
+            color: blue;
+        }
+        .fun-fact {
+            margin: 20px 0;
+        }
+        .fun-fact p {
+            font-style: italic;
+        }
+        .fun-fact span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .achievements {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .achievements h2 {
+            color: blue;
+        }
+        .achievement {
+            margin: 20px 0;
+        }
+        .achievement p {
+            font-style: italic;
+        }
+        .achievement span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+<style>
+        @font-face {
+            font-family: 'NotoSans_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-regular.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_medium_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-medium.ttf);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_bold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-bold.woff);
+        }
+
+        @font-face {
+            font-family: 'NotoSans_semibold_online_security'; 
+            src: url(chrome-extension://llbcnfanfmjhpedaedhbcnpgeepdnnok/assets/fonts/noto-sans-semibold.ttf);
+        }
+</style></head>
+<body>
+    <header>
+        <!-- Include the navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#home">HOME</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#about">ABOUT</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#projects">PROJECTS</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#blog">BLOG</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#fun-facts">FUN FACTS</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#achievements">ACHIEVEMENTS</a></li>
+                <li><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Welcome to Osaze</h1>
+                <p>This is a unique experience.</p>
+                <button onclick="window.location.href=&#39;#about&#39;">Learn More</button>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h1>About Me</h1>
+            <p>Hi, I'm Osaze David, a passionate programmer and web designer from Nigeria. I'm excited to share my skills and interests with you.</p>
+            <h2>What I Do</h2>
+            <ul>
+                <li>Programming: I enjoy building innovative solutions using various programming languages.</li>
+                <li>Website Designing: I create visually appealing and user-friendly websites that meet clients' needs.</li>
+                <li>AI Projects: I explore the possibilities of artificial intelligence and machine learning.</li>
+                <li>Gaming: I'm an avid gamer and enjoy playing games like Call of Duty: Mobile (CODM).</li>
+            </ul>
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming languages: Python, Java, JavaScript</li>
+                <li>Web development frameworks: React, Angular, Vue</li>
+                <li>AI and machine learning: TensorFlow, PyTorch</li>
+                <li>Document editing: Microsoft Office, Google Docs</li>
+            </ul>
+            <h2>Get in Touch</h2>
+            <p>Email: <a href="mailto:osazedavid969@gmail.com">osazedavid969@gmail.com</a></p>
+            <p>Feel free to connect with me and explore how we can work together on exciting projects!</p>
+            <div class="social-links">
+                <a href="https://x.com/DavidOsaze001?t=DdNSIb6amhver2noiXRqQQ&amp;s=08" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="https://www.facebook.com/profile.php?id=61574031344121" target="_blank">Facebook</a>
+                <a href="https://wa.me/2348114581083" target="_blank">WhatsApp</a>
+            </div>
+        </section>
+
+        <section id="projects" class="projects container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: AI Chatbot</h3>
+                <p>An AI-powered chatbot that can assist users with various tasks and answer questions.</p>
+                <span>Technologies: Python, TensorFlow, Flask</span>
+            </div>
+            <div class="project">
+                <h3>Project 2: E-commerce Website</h3>
+                <p>A fully functional e-commerce website with a user-friendly interface and secure payment gateway.</p>
+                <span>Technologies: React, Node.js, MongoDB</span>
+            </div>
+            <div class="project">
+                <h3>Project 3: Mobile Game</h3>
+                <p>An engaging mobile game with stunning graphics and smooth gameplay.</p>
+                <span>Technologies: Unity, C#</span>
+            </div>
+        </section>
+
+        <section id="blog" class="blog container">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Post 1: The Future of AI</h3>
+                <p>Exploring the potential of artificial intelligence and its impact on various industries.</p>
+                <span>Published on: January 1, 2023</span>
+            </div>
+            <div class="blog-post">
+                <h3>Post 2: Web Development Trends</h3>
+                <p>A look at the latest trends in web development and how they are shaping the future of the web.</p>
+                <span>Published on: February 15, 2023</span>
+            </div>
+            <div class="blog-post">
+                <h3>Post 3: Tips for Learning Programming</h3>
+                <p>Helpful tips and resources for beginners who want to learn programming.</p>
+                <span>Published on: March 10, 2023</span>
+            </div>
+        </section>
+
+        <section id="fun-facts" class="fun-facts container">
+            <h2>Fun Facts</h2>
+            <div class="fun-fact">
+                <p>Did you know that the first computer programmer was Ada Lovelace, who wrote an algorithm for Charles Babbage's early mechanical general-purpose computer?</p>
+            </div>
+            <div class="fun-fact">
+                <p>The first computer virus was created in 1983 by a 15-year-old high school student named Rich Skrenta.</p>
+            </div>
+            <div class="fun-fact">
+                <p>Python is named after the British comedy series "Monty Python's Flying Circus," not the snake.</p>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements container">
+            <h2>Achievements</h2>
+            <div class="achievement">
+                <p>Winner of the 2022 Hackathon for developing an innovative AI solution.</p>
+            </div>
+            <div class="achievement">
+                <p>Recognized as a top contributor in the open-source community for contributions to various projects.</p>
+            </div>
+            <div class="achievement">
+                <p>Published research paper on machine learning algorithms in a reputed journal.</p>
+            </div>
+        </section>
+
+        <section id="image-gallery" class="container">
+            <h2>Image Gallery</h2>
+            <p>Content not available</p>
+        </section>
+
+        <section id="contact" class="container">
+            <h1>Contact Us</h1>
+            <p>Phone: 09137111247</p>
+            <p>Email: <a href="mailto:osazedavid969@gmail.com">osazedavid969@gmail.com</a></p>
+            <img src="./PROGET.WEB PY_files/image-file.jpg" alt="Contact Us" class="contact-image"> <!-- Add your contact image here -->
+            <div class="contact-form">
+                <form action="http://localhost:5000/submit_form" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required="">
+                    
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required="">
+                    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required=""></textarea>
+                    
+                    <input type="hidden" name="hash_id" value="123456789">
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Osaze is a fantastic programmer and web designer. His work is top-notch!"</p>
+                <span>- Client A</span>
+            </div>
+            <div class="testimonial">
+                <p>"I highly recommend Osaze for any web design projects. He is very professional."</p>
+                <span>- Client B</span>
+            </div>
+        </section>
+
+        <section id="newsletter-signup" class="newsletter-signup">
+            <h2>Newsletter Signup</h2>
+            <p>Stay updated with our latest news and updates. Sign up for our newsletter!</p>
+            <input type="email" placeholder="Enter your email" required="">
+            <button type="submit">Subscribe</button>
+        </section>
+
+        <section id="certificate" class="container">
+            <h2>Certificates</h2>
+            <img src="./PROGET.WEB PY_files/certificate.jpg" alt="Certificate 1" style="max-width: 100%; height: auto;">
+            <img src="./PROGET.WEB PY_files/certificate2.jpg" alt="Certificate 2" style="max-width: 100%; height: auto; margin-top: 20px;">
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2075 Osaze | All Rights Reserved</p>
+        <p><a href="http://127.0.0.1:3000/c:/Users/USER/AppData/Roaming/Code/User/bal%202.html#home">Back to top</a></p>
+    </footer>
+
+    <script src="./PROGET.WEB PY_files/script.js.download"></script>
+
+
+</body></html>
